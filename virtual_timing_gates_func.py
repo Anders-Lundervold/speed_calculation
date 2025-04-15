@@ -1,8 +1,8 @@
 import numpy as np
-
 import matplotlib.pyplot as plt
 
-def virtual_timing_gates_funv1(test_marker, running_direction, TIMING_GATE_1_pos, TIMING_GATE_2_pos, Target_speed, Tolerance, fs, plot_figure):
+
+def v_t_g(test_marker, running_direction, TIMING_GATE_1_pos, TIMING_GATE_2_pos, Target_speed, Tolerance, fs, plot_figure):
     """
     Function to calculate mean speed and validate based on timing gates.
     """
