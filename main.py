@@ -7,15 +7,16 @@ from vtg_3d import plot_3d
 from vtg_dist import v_t_g_dist
 
 # Folder containing the TSV files
-folder_path = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Qualisys\PhD_course\Data\raw_data\FP02\pref_speed'
-output_folder = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Programmering\vscode\speed_calculation\raw_data\FP02\pref_speed'
+folder_path = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Qualisys\PhD_course\Data\tracked_data\FP01\pref_speed'
+output_folder = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Programmering\vscode\speed_calculation\tracked_data\FP01\pref_speed'
 os.makedirs(output_folder, exist_ok=True)  # Ensure the output folder exists
 
 # Parameters
 running_direction = 'y'  # According to the lab coordinate system
-TIMING_GATE_1_pos = 1.7  # Position in meters of timing gate 1
-TIMING_GATE_2_pos = -0.5  # Position in meters of timing gate 2
-Target_speed = 4.04  # Target speed in m/s
+TIMING_GATE_1_pos = 1.7  # Position in meters of timing gate 1 // 1.7 m is 0.5 m before the force plate
+TIMING_GATE_2_pos = -0.5  # Position in meters of timing gate 2 // -0.5 m is 0.5 m after the force plate
+# Note: The timing gates are set to 0.5 m before and after the force plate to ensure the subject is running through the gates
+Target_speed = 4.5  # Target speed in m/s
 Tolerance = 10  # Tolerance in percentage (+/-)
 fs = 200  # Marker sampling frequency (e.g., 200 Hz)
 plot_figure = 0  # Do not display plots

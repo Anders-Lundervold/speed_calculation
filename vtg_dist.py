@@ -46,7 +46,7 @@ def v_t_g_dist(test_marker, running_direction, TIMING_GATE_1_pos, TIMING_GATE_2_
 
     # Always generate the plot
     plt.figure(figsize=(10, 6))
-    plt.axhline(speed, color='b', linewidth=2.5, label=f'Calculated Speed: {speed:.2f} m/s')
+    plt.axhline(speed, color='b', linewidth=2.5, label=f'Calculated Speed')
     plt.axhline(Target_speed, color='g', linestyle=':', label=f'Target Speed')
     plt.axhline(lower_bound, color='r', linestyle='--', label=f'Lower Bound')
     plt.axhline(upper_bound, color='r', linestyle='--', label=f'Upper Bound')

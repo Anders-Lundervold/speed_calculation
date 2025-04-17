@@ -42,7 +42,7 @@ def plot_3d(test_marker, running_direction, TIMING_GATE_1_pos, TIMING_GATE_2_pos
     ax.set_xlabel('X-axis (m)')
     ax.set_ylabel('Y-axis (m)')
     ax.set_zlabel('Z-axis (m)')
-    ax.set_title('3D Coordinate System with Timing Gates')
+    ax.set_title('Running trajectory')
     ax.grid(True)
 
     # Rotate the figure by 90 degrees
