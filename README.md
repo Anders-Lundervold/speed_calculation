@@ -117,3 +117,13 @@ e.g., results/tracked_data/FP01/fixed_speed/Timing_gates_2.2m/Running_FIX 1_3d_p
 4. Run the script using Python:
    ```bash
    python main.py
+
+---
+
+## Qualysis data
+
+Qualisys data can be found in the folder **QTM_data_HFIMV9054** 
+
+Here you will find the settings.paf, and the readable version settings.txt. 
+
+in the folder **AIM models** you vil find the AIM model used in this project. It expects the same marker set up as in figure 1 in the article 
