@@ -24,7 +24,9 @@ This script, `main.py`, is part of a university project designed to analyze moti
 
 ## Input Data
 
-The script processes `.tsv` files containing 3D marker trajectory data. Each file must include the following columns:
+The script processes `.tsv` files containing 3D marker trajectory data. The files used in this project can be found on the folder path QTM_data_HFIMV9053 > Data > traced_data > then choose either FP01 or FO02 > the choose either fixed_speed or pref_speed. 
+
+Each file must include the following columns:
 - `SIPS_left X`, `SIPS_left Y`, `SIPS_left Z`: Coordinates of the left posterior superior iliac spine (SIPS) marker.
 - `SIPS_right X`, `SIPS_right Y`, `SIPS_right Z`: Coordinates of the right posterior superior iliac spine (SIPS) marker.
 
