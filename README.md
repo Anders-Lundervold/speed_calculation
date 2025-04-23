@@ -1,8 +1,8 @@
-# README for `main.py`
+# README for Motion Capture Project HFIMV9053 - Speed calculation
 
 ## Overview
 
-This script, `main.py`, is part of a university project designed to analyze motion capture data and calculate running speed using two distinct methods: **numerical differentiation** and **virtual timing gates**. The script processes 3D marker trajectory data, validates the calculated speeds against a target speed, and generates visualizations and summary outputs for evaluation.
+This script, `main.py`, is part of a PhD course project designed to analyze motion capture data and calculate running speed using two distinct methods: **numerical differentiation** and **virtual timing gates**. The script processes 3D marker trajectory data, validates the calculated speeds against a target speed, and generates visualizations and summary outputs for evaluation.
 
 ---
 
