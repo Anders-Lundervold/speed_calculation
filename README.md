@@ -72,7 +72,7 @@ The following parameters can be adjusted in the script:
 - **`running_direction`**: Direction of movement (`'x'` or `'y'`).
 - **`TIMING_GATE_1_pos`**: Position of Timing Gate 1 (e.g., 1.7 m).
 - **`TIMING_GATE_2_pos`**: Position of Timing Gate 2 (e.g., -0.5 m).
-- **`Target_speed`**: Target speed for validation (e.g., 4.5 m/s).
+- **`Target_speed`**: Target speed for validation (e.g., 3.5 m/s).
 - **`Tolerance`**: Tolerance for validation in percentage (e.g., 10%).
 - **`fs`**: Sampling frequency of the motion capture data (e.g., 200 Hz).
 - **`plot_figure`**: Set to `1` to display plots during execution, or `0` to suppress them.
