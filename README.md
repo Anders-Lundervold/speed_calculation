@@ -41,7 +41,7 @@ The script processes `.tsv` files containing 3D marker trajectory data. Each fil
    - **Virtual Timing Gates**: Calculates the average speed based on the time taken to traverse the distance between two timing gates.
 
 3. **Validation**:
-   - Both methods validate the calculated speeds against a target speed (e.g., 4.5 m/s) with a tolerance (e.g., ±10%).
+   - Both methods validate the calculated speeds against a target speed (e.g., 3.5 m/s) with a tolerance (e.g., ±10%).
 
 4. **Output**:
    - Results are saved to an Excel file (`speed_comparison.xlsx`) with the following columns:
