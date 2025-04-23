@@ -1,8 +1,8 @@
-# README for `main.py`
+# README for Motion Capture Project HFIMV9053 - Speed calculation
 
 ## Overview
 
-This script, `main.py`, is part of a university project designed to analyze motion capture data and calculate running speed using two distinct methods: **numerical differentiation** and **virtual timing gates**. The script processes 3D marker trajectory data, validates the calculated speeds against a target speed, and generates visualizations and summary outputs for evaluation.
+This script, `main.py`, is part of a PhD course project designed to analyze motion capture data and calculate running speed using two distinct methods: **numerical differentiation** and **virtual timing gates**. The script processes 3D marker trajectory data, validates the calculated speeds against a target speed, and generates visualizations and summary outputs for evaluation.
 
 ---
 
@@ -24,7 +24,9 @@ This script, `main.py`, is part of a university project designed to analyze moti
 
 ## Input Data
 
-The script processes `.tsv` files containing 3D marker trajectory data. Each file must include the following columns:
+The script processes `.tsv` files containing 3D marker trajectory data. The files used in this project can be found on the folder path **QTM_data_HFIMV9053 > Data > traced_data > then choose either FP01 or FO02 > the choose either fixed_speed or pref_speed**. 
+
+Each file must include the following columns:
 - `SIPS_left X`, `SIPS_left Y`, `SIPS_left Z`: Coordinates of the left posterior superior iliac spine (SIPS) marker.
 - `SIPS_right X`, `SIPS_right Y`, `SIPS_right Z`: Coordinates of the right posterior superior iliac spine (SIPS) marker.
 
@@ -72,7 +74,7 @@ The following parameters can be adjusted in the script:
 - **`running_direction`**: Direction of movement (`'x'` or `'y'`).
 - **`TIMING_GATE_1_pos`**: Position of Timing Gate 1 (e.g., 1.7 m).
 - **`TIMING_GATE_2_pos`**: Position of Timing Gate 2 (e.g., -0.5 m).
-- **`Target_speed`**: Target speed for validation (e.g., 4.5 m/s).
+- **`Target_speed`**: Target speed for validation (e.g., 3.5 m/s).
 - **`Tolerance`**: Tolerance for validation in percentage (e.g., 10%).
 - **`fs`**: Sampling frequency of the motion capture data (e.g., 200 Hz).
 - **`plot_figure`**: Set to `1` to display plots during execution, or `0` to suppress them.
@@ -88,8 +90,21 @@ The following parameters can be adjusted in the script:
    - 2D plots for velocity-based and distance-based speed calculations.
    - 3D trajectory plots showing the subject's movement through the timing gates.
 
-3. **Log Messages**:
-   - The script prints progress and error messages to the console for each processed file.
+---
+
+## Results 
+
+All results can be found in the **results** folder. 
+
+`speed_comparison_tracked_data.xlsx` contains the speed of timing gates, and the two methods used in python.
+
+the two excel files named `..._bland_altman.xlsx` is used to plot the Bland-Altman plots. 
+
+Under the folder **graphs** you can find the Blant-Altman plots. 
+
+following either **tracked_data** or **raw_data** you can find all the graphs of each indivudal trial, including 3D running trajectory, speed using both methods, and an excel-file containing calculted speed for that conditions
+
+e.g., results/tracked_data/FP01/fixed_speed/Timing_gates_2.2m/Running_FIX 1_3d_plot.png will give you the 3D plot of FP01 in fixed speed (trial 1) with the timing gates placed 2.2 meters apart. There is also a folder with the timing gates 4 meters apart, however this distance was not always within the capture volume.  
 
 ---
 
@@ -97,6 +112,20 @@ The following parameters can be adjusted in the script:
 
 1. Place the `.tsv` files in the folder specified by `folder_path`.
 2. Adjust the parameters in the script as needed.
-3. Run the script using Python:
+3. Make sure you have the following scripts in the same folder path as `main.py`:
+   `vtg_3d.py`, `vtg_speed.py`, and `vtg_dist.py`. 
+4. Run the script using Python:
    ```bash
    python main.py
+
+---
+
+## Qualysis data
+
+Qualisys data can be found in the folder **QTM_data_HFIMV9054** 
+
+Here you will find the settings.paf, and the readable version settings.txt. 
+
+in the folder **AIM models** you vil find the AIM model used in this project. It expects the same marker set up as in figure 1 in the article 
+
+In the folder **Data** all Qualisys files are avaliable  
