@@ -2,23 +2,23 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from vtg_speed import v_t_g
-from vtg_3d import plot_3d
-from vtg_dist import v_t_g_dist
+from vtg_speed import v_t_g # function to calculate speed using numerical differentiation 
+from vtg_3d import plot_3d # function to plot the 3D trajectory
+from vtg_dist import v_t_g_dist # function to calculate speed using distance-based method
 
 # Folder containing the TSV files
-folder_path = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Qualisys\PhD_course\Data\tracked_data\FP01\pref_speed'
-output_folder = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Programmering\vscode\speed_calculation\tracked_data\FP01\pref_speed'
-os.makedirs(output_folder, exist_ok=True)  # Ensure the output folder exists
+folder_path = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Qualisys\PhD_course\Data\tracked_data\FP01\pref_speed' # Path to the folder with TSV files
+output_folder = r'C:\Users\anderslu\OneDrive - nih.no\Documents\Programmering\vscode\speed_calculation\tracked_data\FP01\pref_speed' # Path to the output folder for results and plots
+os.makedirs(output_folder, exist_ok=True)  
 
 # Parameters
 running_direction = 'y'  # According to the lab coordinate system
 TIMING_GATE_1_pos = 1.7  # Position in meters of timing gate 1 // 1.7 m is 0.5 m before the force plate
 TIMING_GATE_2_pos = -0.5  # Position in meters of timing gate 2 // -0.5 m is 0.5 m after the force plate
 # Note: The timing gates are set to 0.5 m before and after the force plate to ensure the subject is running through the gates
-Target_speed = 4.5  # Target speed in m/s
+Target_speed = 3.5  # Target speed in m/s
 Tolerance = 10  # Tolerance in percentage (+/-)
-fs = 200  # Marker sampling frequency (e.g., 200 Hz)
+fs = 200  # Sampling frequency (e.g., 200 Hz)
 plot_figure = 0  # Do not display plots
 
 # Initialize a list to store results
@@ -29,8 +29,7 @@ def process_file(file_path, filename):
     Process a single TSV file to calculate mean speed and validate it.
     """
     try:
-        # Read the TSV file
-        data = pd.read_csv(file_path, sep='\t', skiprows=11)  # Skip metadata rows
+        data = pd.read_csv(file_path, sep='\t', skiprows=11)  
     except Exception as e:
         print(f"Error: Failed to read TSV file {filename}. {e}")
         return None
@@ -55,7 +54,7 @@ def process_file(file_path, filename):
     # Combine the midpoint coordinates into a single array
     marker_to_use = np.column_stack((mid_x, mid_y, mid_z))
 
-    # Call the velocity-based speed calculation function
+    # Calculate the speed using numerical differentiation
     try:
         mean_speed, is_valid = v_t_g(
             marker_to_use,

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def v_t_g_dist(test_marker, running_direction, TIMING_GATE_1_pos, TIMING_GATE_2_pos, Target_speed, Tolerance, fs, plot_figure):
     """
-    Function to calculate mean speed and validate based on timing gates.
+    Function to calculate mean speed and validate based on distance based methods.
     """
 
     # Adjust the range to include 0.5 meters before Timing Gate 1 and 0.5 meters after Timing Gate 2
