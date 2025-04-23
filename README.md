@@ -112,6 +112,8 @@ e.g., results/tracked_data/FP01/fixed_speed/Timing_gates_2.2m/Running_FIX 1_3d_p
 
 1. Place the `.tsv` files in the folder specified by `folder_path`.
 2. Adjust the parameters in the script as needed.
-3. Run the script using Python:
+3. Make sure you have the following scripts in the same folder path as `main.py`:
+   `vtg_3d.py`, `vtg_speed.py`, and `vtg_dist.py`. 
+4. Run the script using Python:
    ```bash
    python main.py
