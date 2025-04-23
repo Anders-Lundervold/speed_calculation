@@ -127,3 +127,5 @@ Qualisys data can be found in the folder **QTM_data_HFIMV9054**
 Here you will find the settings.paf, and the readable version settings.txt. 
 
 in the folder **AIM models** you vil find the AIM model used in this project. It expects the same marker set up as in figure 1 in the article 
+
+In the folder **Data** all Qualisys files are avaliable  
