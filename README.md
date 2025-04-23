@@ -24,7 +24,7 @@ This script, `main.py`, is part of a university project designed to analyze moti
 
 ## Input Data
 
-The script processes `.tsv` files containing 3D marker trajectory data. The files used in this project can be found on the folder path QTM_data_HFIMV9053 > Data > traced_data > then choose either FP01 or FO02 > the choose either fixed_speed or pref_speed. 
+The script processes `.tsv` files containing 3D marker trajectory data. The files used in this project can be found on the folder path **QTM_data_HFIMV9053 > Data > traced_data > then choose either FP01 or FO02 > the choose either fixed_speed or pref_speed**. 
 
 Each file must include the following columns:
 - `SIPS_left X`, `SIPS_left Y`, `SIPS_left Z`: Coordinates of the left posterior superior iliac spine (SIPS) marker.
@@ -90,8 +90,21 @@ The following parameters can be adjusted in the script:
    - 2D plots for velocity-based and distance-based speed calculations.
    - 3D trajectory plots showing the subject's movement through the timing gates.
 
-3. **Log Messages**:
-   - The script prints progress and error messages to the console for each processed file.
+---
+
+## Results 
+
+All results can be found in the results folder. 
+
+**speed_comparison_tracked_data.xlsx** contains the speed of timing gates, and the two methods used in python.
+
+the two excel files named ..._bland_altman.xlsx is used to plot the Bland-Altman plots. 
+
+Under the folder **graphs** you can find the Blant-Altman plots. 
+
+following either **tracked_data** or **raw_data** you can find all the graphs of each indivudal trial, including 3D running trajectory, speed using both methods, and an excel-file containing calculted speed for that conditions
+
+e.g., results/tracked_data/FP01/fixed_speed/Timing_gates_2.2m/Running_FIX 1_3d_plot.png will give you the 3D plot of FP01 in fixed speed (trial 1) with the timing gates placed 2.2 meters apart. There is also a folder with the timing gates 4 meters apart, however this distance was not always within the capture volume.  
 
 ---
 
