@@ -94,11 +94,11 @@ The following parameters can be adjusted in the script:
 
 ## Results 
 
-All results can be found in the results folder. 
+All results can be found in the **results** folder. 
 
-**speed_comparison_tracked_data.xlsx** contains the speed of timing gates, and the two methods used in python.
+'speed_comparison_tracked_data.xlsx' contains the speed of timing gates, and the two methods used in python.
 
-the two excel files named ..._bland_altman.xlsx is used to plot the Bland-Altman plots. 
+the two excel files named '..._bland_altman.xlsx' is used to plot the Bland-Altman plots. 
 
 Under the folder **graphs** you can find the Blant-Altman plots. 
 
